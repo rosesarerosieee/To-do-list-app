@@ -1,38 +1,29 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.background-black {
+  background-color: lightblue;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.background-white {
+  background-color: pink;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Ensure the icon doesn't have a background color */
+.icon {
+ 
+  background-color: transparent !important; /* Important to override if necessary */
+  width: 100px;
+  height: 20vh;
+}
+
+.iconn{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  position: absolute;
+  right: 0;
+  align-items: end;
+  justify-content: end;
 }

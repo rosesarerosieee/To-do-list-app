@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+import Navbar from "./components/navbar";
+import Input from "./Input";
 import './App.css';
+import Card from "./components/card";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLightbulb } from '@fortawesome/free-solid-svg-icons'
+import { useState } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+function App  () {
+
+  const [isBlack, setIsBlack] = useState(true);
+
+  const toggle = () => {
+    setIsBlack(!isBlack);
+  }
+
+
+
+  return(
+    <div className={isBlack ? 'background-black' : 'background-white'}> 
+    <div className="iconn">
+    <FontAwesomeIcon icon={faLightbulb} onClick={toggle} className='icon'/>
     </div>
-  );
+    <Card/>
+   
+    </div>
+
+  )
+
+
+
 }
 
 export default App;
